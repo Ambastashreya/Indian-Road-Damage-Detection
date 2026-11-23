@@ -16,9 +16,12 @@ st.title("Road Damage Detection System")
 st.write("AI-powered road damage inspection using YOLO11n")
 
 # Load our trained model
+#@st.cache_resource
+#def load_model():
 @st.cache_resource
 def load_model():
-    return YOLO("runs/detect/road_damage_final/weights/best.pt")
+    return YOLO("runs/detect/road_damage_extended/weights/best.pt")
+    #return YOLO("runs/detect/road_damage_final/weights/best.pt")
 
 model = load_model()
 

@@ -1,7 +1,8 @@
 from ultralytics import YOLO
 
 def main():
-    model = YOLO("runs/detect/road_damage_final/weights/best.pt")
+    #model = YOLO("runs/detect/road_damage_final/weights/best.pt")
+    model = YOLO("runs/detect/road_damage_extended/weights/best.pt")
 
     metrics = model.val(
         data="datasets/RDD_SPLIT/data.yaml",
